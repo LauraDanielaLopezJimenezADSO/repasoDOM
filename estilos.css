@@ -48,7 +48,7 @@ section{
     padding: var(--padding);
 }
 
-a{
+a, .list__item{
     color: var(--ripeLemon);
     text-decoration: none;
 }
@@ -74,8 +74,8 @@ ul{
 
 }
 
-/* etiqueta ul con la clase list */
-ul.list > li{
+/* etiqueta ul con la clase list ---------------------*/
+li.list__item{
     cursor: pointer;
 }
 
@@ -89,11 +89,47 @@ li.item:hover a {
     padding: 0 var(--padding);
 }
 
+/* FORMULARIO */
+.search{
+    display: flex;
+    justify-content: end;
+}
+
+.search__form{
+    border: solid 1px var(--ripeLemon);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--margin);
+    padding: var(--padding);
+    display: inline-grid;
+    grid-template-columns: auto 40px;
+    grid-template-rows: auto;
+    gap: 4px;
+    /* justify-content: end; */
+}
+
+.input{
+    width: 100%;
+    padding: var(--padding);
+    outline: none;    /* quitar el borde predeterminado del input al estar activo */
+    border: solid 1px var(--ripeLemon);
+    font-size: 1rem;
+    color: var(--black);
+}
+
+.cards{
+    /* distribucion de 3 */
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
 .card{
     width: 450px;
     border: solid 1px var(--ripeLemon); /* 3 valores - tipo de borde, tamalñao y color */
     border-radius: var(--border-radius);
     margin: 0 auto;
+    
 }
 
 .card__header{
@@ -130,6 +166,12 @@ li.item:hover a {
     align-items: center;
     border: solid 0.5px var(--ripeLemon);
     transition: var(--transition);
+}
+
+.button--icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button__text{}
@@ -170,3 +212,14 @@ li.item:hover a {
     background: var(--butteredRum);
     color: var(--blanco);
 }
+
+ul.list > .list__item:last-child{
+    border: none;
+}
+
+ul.list > li.list__item > a:visited{
+    color: rgb(53, 185, 0);
+
+}
+
+
